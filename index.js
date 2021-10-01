@@ -15,7 +15,7 @@ const app = express ()
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
-app.use(bodyParser()  );
+app.use(bodyParser());
 app.use(session({ secret: '2181616A8D5AD45EE3A64BE1B325F', saveUninitialized: false, resave: true }));
 
 app.use(passport.initialize());
@@ -66,6 +66,7 @@ db.connect((err, result) => {
 
 
 require('./routes/alert.js')(app,db)
+require('./routes/write.js')(app,db)
 
 
 
