@@ -67,6 +67,7 @@ db.connect((err, result) => {
 
 require('./routes/alert.js')(app,db)
 require('./routes/write.js')(app,db)
+require('./routes/update.js')(app,db)
 
 
 

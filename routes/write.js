@@ -20,7 +20,7 @@ var data ={
 }
 console.log(data)
     
-    db.query('INSERT INTO `alertbox`  (alert,state,source) VALUES (?,?,?)',[req.body.alert,req.body.state,req.body.source],(e, data) =>{
+    db.query('INSERT INTO `alertbox`  (alert,state,source) VALUES (?,?,?)',[req.body.alert,"A",req.body.source],(e, data) =>{
         console.log(data);
         console.log(e);
 
