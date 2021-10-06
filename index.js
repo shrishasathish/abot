@@ -5,6 +5,7 @@ const mysql = require ('mysql')
 const path = require('path')
 const flash  = require('connect-flash')
 const passport = require('passport')
+const app = express ()
 
 const bodyParser = require("body-parser");
 var http = require("http");
@@ -17,7 +18,7 @@ app.use(cors({
 }));
 
 
-const app = express ()
+
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
