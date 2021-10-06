@@ -8,7 +8,13 @@ const passport = require('passport')
 
 const bodyParser = require("body-parser");
 var http = require("http");
-
+const cors = require('cors');
+app.use(cors({
+  origin: ["https://staging.tax360.in", "https://admin-staging.tax360.in", "http://3.134.129.145:1207" , 
+  "http://3.134.129.145:1208","http://localhost:1207","http://localhost:1208","https://tax360.in","https://admin.tax360.in"],
+ allowedHeaders: ["my-custom-header"],
+ credentials: true
+}));
 
 
 const app = express ()
